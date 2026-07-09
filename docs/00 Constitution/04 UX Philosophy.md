@@ -50,6 +50,8 @@ Forge should provide the right amount of information at the right time.
 
 The default experience should be simple, clear and actionable.
 
+Forge should never overwhelm the user with information. Instead, it should progressively reveal the information that helps the user make the next good decision.
+
 Additional explanations, educational content and deeper insights should always be available, but never forced upon the user.
 
 Users who wish to learn more should always be able to do so.
