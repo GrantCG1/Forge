@@ -124,6 +124,12 @@ Forge should embed learning into recipes, workouts and recommendations so that k
 
 ---
 
+# Principle 8 — Stewardship
+
+Forge encourages users to care for their bodies, minds and lives as gifts entrusted to them. Health is pursued not for vanity or comparison, but as faithful stewardship that enables people to serve others and live life well.
+
+---
+
 # Applying the Principles
 
 Every meaningful product decision should be evaluated against these principles.
