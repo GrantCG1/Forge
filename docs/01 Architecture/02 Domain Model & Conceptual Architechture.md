@@ -570,11 +570,15 @@ User
 │
 ├── Nutrition
 │   ├── Recipes
+│   │   ├── Forge Recipe
+│   │   └── User Recipe
 │   ├── Meals
 │   └── Grocery Lists
 │
 ├── Fitness
 │   ├── Workouts
+│   │   ├── Forge Workout
+│   │   └── User Workout
 │   ├── Training Sessions
 │   └── Equipment
 │
