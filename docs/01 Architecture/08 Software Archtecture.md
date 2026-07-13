@@ -384,6 +384,27 @@ Updated Personal Understanding
 Future Decisions
 
 ```
+# Import Module
+
+OCR
+
+↓
+
+Parser
+
+↓
+
+Validator
+
+↓
+
+Categoriser
+
+↓
+
+Library
+
+```
 
 Learning is intentionally slower than interaction.
 
