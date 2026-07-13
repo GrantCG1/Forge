@@ -515,6 +515,303 @@ Greater Confidence
 The user should notice that Forge increasingly understands how they live.
 
 ---
+---
+
+# Journey 13 – Import Recipe
+
+## Goal
+
+Allow users to add existing recipes to their personal Forge Library.
+
+Forge should support recipes from family members, friends, books, websites, magazines, coaches and other trusted sources.
+
+The objective is not to replace existing knowledge, but to organise and integrate it into the user's healthy lifestyle.
+
+---
+
+## User Flow
+
+Recipe Source
+
+↓
+
+Choose Import Method
+
+↓
+
+Capture Recipe
+
+↓
+
+Forge Extracts Information
+
+↓
+
+User Reviews & Edits
+
+↓
+
+Recipe Categorised
+
+↓
+
+Recipe Added to Personal Library
+
+↓
+
+Available for Future Recommendations
+
+---
+
+## Import Methods
+
+Forge should support multiple methods of importing recipes.
+
+Examples include:
+
+- Camera / Photograph
+- Image
+- PDF
+- Manual Entry
+- Copy & Paste
+- Website URL *(Future)*
+
+Additional import methods may be added without changing the overall user journey.
+
+---
+
+## Forge Responsibilities
+
+During import Forge should:
+
+- Extract recipe title
+- Identify ingredients
+- Estimate quantities
+- Detect preparation method
+- Estimate preparation time
+- Estimate servings
+- Estimate nutritional information where possible
+- Identify potential allergens
+- Detect duplicate recipes
+
+Forge should ask the user for clarification whenever confidence is low.
+
+---
+
+## User Responsibilities
+
+The user reviews:
+
+- Title
+- Ingredients
+- Quantities
+- Instructions
+- Preparation time
+- Difficulty
+- Servings
+
+The user always confirms the imported recipe before it becomes part of their Personal Library.
+
+---
+
+## Result
+
+The recipe becomes a Personal Recipe.
+
+Once saved, Forge treats Personal Recipes and Forge Recipes equally when generating recommendations.
+
+The recipe may later be:
+
+- Edited
+- Categorised
+- Added to meal plans
+- Added to shopping lists
+- Shared *(Future)*
+- Deleted
+
+---
+
+# Journey 14 – Create Recipe
+
+## Goal
+
+Allow users to create recipes from scratch.
+
+This supports family recipes, experimental recipes and meals that cannot be imported.
+
+---
+
+## User Flow
+
+Create Recipe
+
+↓
+
+Enter Basic Details
+
+↓
+
+Add Ingredients
+
+↓
+
+Add Instructions
+
+↓
+
+Review
+
+↓
+
+Save
+
+↓
+
+Recipe Added to Personal Library
+
+---
+
+## Result
+
+The recipe immediately becomes available for:
+
+- Meal recommendations
+- Meal planning
+- Grocery planning
+- Nutritional analysis
+- Future editing
+
+---
+
+# Journey 15 – Import Workout
+
+## Goal
+
+Allow users to add existing workout programmes to their Personal Library.
+
+These may originate from coaches, physiotherapists, friends, books or personal notes.
+
+Forge should organise and integrate these workouts rather than replace them.
+
+---
+
+## User Flow
+
+Workout Source
+
+↓
+
+Choose Import Method
+
+↓
+
+Capture Workout
+
+↓
+
+Forge Extracts Exercises
+
+↓
+
+User Reviews & Edits
+
+↓
+
+Workout Categorised
+
+↓
+
+Workout Added to Personal Library
+
+↓
+
+Available for Future Recommendations
+
+---
+
+## Import Methods
+
+Supported methods include:
+
+- Camera / Photograph
+- Image
+- PDF
+- Manual Entry
+- Copy & Paste
+
+Future methods may include importing from supported fitness platforms.
+
+---
+
+## Forge Responsibilities
+
+Forge should identify:
+
+- Workout title
+- Exercises
+- Sets
+- Repetitions
+- Duration
+- Equipment
+- Muscle groups
+- Difficulty
+
+Forge should ask questions whenever information is incomplete.
+
+---
+
+## Result
+
+The workout becomes a Personal Workout.
+
+Forge may recommend it in future plans where appropriate.
+
+---
+
+# Journey 16 – Create Workout
+
+## Goal
+
+Allow users to build personalised workouts from scratch.
+
+---
+
+## User Flow
+
+Create Workout
+
+↓
+
+Add Exercises
+
+↓
+
+Configure Workout
+
+↓
+
+Review
+
+↓
+
+Save
+
+↓
+
+Workout Added to Personal Library
+
+---
+
+## Result
+
+The workout becomes available for:
+
+- Daily recommendations
+- Training plans
+- Progress tracking
+- Future editing
+
+---
 
 # Decision Points
 
