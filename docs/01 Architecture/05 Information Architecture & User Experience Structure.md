@@ -188,12 +188,22 @@ It provides access to knowledge rather than recommendations.
 ## Contains
 
 Recipes
+├── Forge Recipes
+
+├── My Recipes
+
+└── Import Recipe
 
 Meals
 
 Exercises
 
 Workouts
+├── Forge Workouts
+
+├── My Workouts
+
+└── Import Workout
 
 Recovery Routines
 
