@@ -26,6 +26,8 @@ Rather than attempting to optimise every aspect of a user's health, Forge seeks 
 
 Forge exists to help people make better decisions more consistently, while gradually increasing their understanding and confidence so that healthy living becomes simpler, more sustainable and more enjoyable.
 
+Forge is built upon a Christian worldview. Its values, behaviours and philosophy are intentionally informed by biblical wisdom while serving users through practical, evidence-based health guidance.
+
 ---
 
 # Mission
@@ -41,6 +43,7 @@ By reducing the mental effort associated with everyday health decisions, Forge e
 Forge aims to become the most trusted lifestyle companion for people seeking sustainable health rather than perfection.
 
 Success is measured not by how dependent users become on Forge, but by how confidently they are able to make healthy decisions themselves.
+
 
 ---
 
