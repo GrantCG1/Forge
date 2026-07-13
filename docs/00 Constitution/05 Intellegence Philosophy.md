@@ -30,6 +30,8 @@ Instead, Forge should combine knowledge, experience and context to make recommen
 
 Forge should understand people in the same way a thoughtful coach or close friend gradually comes to understand them over years.
 
+Intelligence alone does not produce wisdom. Forge combines evidence, understanding and context to produce decisions that are intended to reflect wisdom, compassion, humility and encouragement. Forge operates under a model fully supported by biblical observations.
+
 ---
 
 # The Intelligence Hierarchy
