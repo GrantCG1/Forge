@@ -1,20 +1,24 @@
 # Forge Technical Architecture
 
-**Version:** 0.1  
+**Version:** 0.2  
 **Status:** Draft  
 **Owner:** Grant Groenewald  
 **Contributors:** Grant Groenewald, ChatGPT  
-**Last Updated:** 9 July 2026
+**Last Updated:** 13 July 2026
 
 ---
 
 # Purpose
 
-The Technical Architecture defines the technologies that support Forge.
+The Technical Architecture defines the engineering principles that support Forge.
 
-Its purpose is to establish a stable technical foundation while remaining flexible enough to evolve as new technologies emerge.
+Its purpose is to establish a stable technical foundation that enables Forge to evolve over many years without compromising its philosophy, maintainability or adaptability.
 
-The architecture should enable long-term maintainability, scalability and adaptability without coupling Forge to specific vendors or services.
+This document intentionally focuses on architectural principles rather than specific implementation technologies.
+
+Technology choices may evolve.
+
+Forge's architecture should not.
 
 ---
 
@@ -23,13 +27,13 @@ The architecture should enable long-term maintainability, scalability and adapta
 This document defines:
 
 - Platform strategy
-- Cloud architecture
-- Local storage
-- Authentication
-- AI integration
-- Synchronisation
+- System architecture
+- Engineering philosophy
+- AI integration philosophy
+- Authentication principles
+- Synchronisation strategy
 - Offline behaviour
-- External services
+- Architectural boundaries
 
 It does not define software structure or coding standards.
 
@@ -41,8 +45,9 @@ This document is intended for:
 
 - Software Engineers
 - Solution Architects
-- DevOps Engineers
 - AI Engineers
+- DevOps Engineers
+- Technical Leads
 
 ---
 
@@ -51,137 +56,89 @@ This document is intended for:
 This document should be read after:
 
 - Architecture Overview
-- Domain Model
+- Domain Model & Conceptual Architecture
+- Domain Relationships & Ownership
 - Decision Engine
-- Information Architecture
+- Information Architecture & User Experience
 - User Journey & Interaction Flows
 
 ---
 
 # Technical Philosophy
 
-Technology should enable Forge.
+Technology exists to support Forge.
 
 Technology should never define Forge.
 
-Every technical decision should preserve the product philosophy established in the Constitution.
+Forge is designed as a long-term craft product rather than an enterprise platform.
+
+Engineering decisions should prioritise:
+
+- Simplicity
+- Maintainability
+- Clarity
+- Replaceability
+- Adaptability
+- Long-term sustainability
+
+Complexity should only be introduced when there is clear evidence that it solves a real problem.
 
 ---
 
 # Platform Strategy
 
-Forge is designed as a mobile-first application.
+Forge is a mobile-first product.
 
-Primary platforms:
-
-- iOS
-- Android
+The primary experience is delivered through mobile devices.
 
 Future platforms may include:
 
 - Desktop
 - Web
+- Wearables
+- Voice interfaces
 
-The architecture should support future expansion without compromising the mobile experience.
+Future platforms should extend the existing experience rather than redefine it.
 
----
-
-# Technology Stack
-
-## Application
-
-Flutter
-
-Reason:
-
-- Single codebase
-- Excellent mobile performance
-- Native experience
-- Strong ecosystem
+The architecture should allow new client applications without requiring changes to the core reasoning systems.
 
 ---
 
-## Backend
+# System Architecture
 
-Cloud-based services.
+Forge is built around a modular monolith.
 
-Responsibilities include:
+Business capabilities remain clearly separated into independent modules while being deployed as a single application during the early stages of the product.
 
-- User accounts
-- Synchronisation
-- AI services
-- Notifications
-- Community features
-- Secure backups
+This approach provides:
 
-The backend should expose well-defined APIs.
+- Faster development
+- Lower operational complexity
+- Easier debugging
+- Simpler deployments
+- Clear module boundaries
 
----
-
-## Local Storage
-
-Forge maintains a local data store.
-
-Local storage enables:
-
-- Today's plan
-- Existing meal plans
-- Existing workouts
-- Progress history
-- User preferences
-
-The application should remain useful without internet connectivity.
+Forge may evolve towards distributed services in the future only if measurable business requirements justify the additional complexity.
 
 ---
 
-# Cloud Synchronisation
+# Decision Engine Philosophy
 
-The cloud provides:
+The Decision Engine is the heart of Forge.
 
-- Secure backup
-- Cross-device synchronisation
-- AI-powered features
-- Community content
-- Continuous updates
+It represents the primary intellectual property of the product.
 
-Synchronisation should occur automatically whenever practical.
+The Decision Engine is responsible only for reasoning.
 
----
+It does not:
 
-# Authentication
+- Manage databases
+- Call external APIs
+- Communicate directly with AI providers
+- Update user information
+- Render user interfaces
 
-Forge supports two usage modes.
-
-## Guest Mode
-
-Allows users to:
-
-- Explore the application
-- Browse the Library
-- Experience Forge
-
-Guest Mode does not provide:
-
-- Personalisation
-- Progress tracking
-- Decision history
-- AI conversations
-- Synchronisation
-
----
-
-## Authenticated Users
-
-Accounts unlock Forge's full capabilities.
-
-Including:
-
-- Personal recommendations
-- Decision history
-- Progress
-- AI conversations
-- Cloud synchronisation
-- Personal memory
+Its sole responsibility is to produce structured decisions from available knowledge.
 
 ---
 
@@ -189,33 +146,52 @@ Including:
 
 Artificial Intelligence enhances Forge.
 
-AI is not Forge.
+Artificial Intelligence is not Forge.
 
-AI should assist with:
+AI should primarily assist with:
 
-- Reasoning
-- Conversations
-- Explanations
-- Planning
+- Natural conversation
 - Education
+- Explanations
+- Content generation
+- Planning assistance
 
-Forge's architecture should remain independent of any specific AI provider.
+The Decision Engine remains responsible for reasoning.
+
+Generative AI should communicate decisions rather than create them.
+
+This separation improves:
+
+- Safety
+- Consistency
+- Explainability
+- Replaceability
+
+AI providers should remain interchangeable through well-defined interfaces.
 
 ---
 
-# External Services
+# Knowledge Architecture
 
-Forge should integrate with services through well-defined interfaces.
+Forge reasons using three independent knowledge sources.
 
-Examples include:
+Evidence
 
-- Calendar providers
-- Grocery services
-- Weather services
-- Wearable devices
-- Health platforms
+Scientific knowledge, educational material, rehabilitation principles and nutritional guidance.
 
-External services should remain replaceable.
+Personal Understanding
+
+Information learned about the individual over time.
+
+Current Context
+
+Information describing today's circumstances.
+
+These three knowledge sources combine to create understanding.
+
+The Decision Engine reasons from understanding.
+
+Learning occurs independently after decisions have been made.
 
 ---
 
@@ -225,66 +201,115 @@ Forge should degrade gracefully.
 
 Available offline:
 
-- Today's recommendations
-- Existing plans
-- Previously synchronised recipes
 - Previously synchronised workouts
+- Previously synchronised meals
+- Existing plans
 - Progress history
-- Notes
+- User preferences
+- Educational content already stored locally
 
-Requires internet:
+Requires connectivity:
 
 - AI conversations
-- New recommendations requiring cloud intelligence
+- Cloud synchronisation
+- Discovering new content
 - Community features
-- Synchronisation
-- External searches
+- External integrations
 
-Users should never lose access to their existing information.
+Users should never lose access to essential functionality due to temporary connectivity issues.
+
+---
+
+# Cloud Synchronisation
+
+Cloud services enhance Forge rather than define it.
+
+The cloud provides:
+
+- Secure backup
+- Device synchronisation
+- AI capabilities
+- Account management
+- Future collaborative features
+
+Synchronisation should occur automatically where practical while respecting user privacy and device resources.
+
+---
+
+# Authentication
+
+Forge supports authenticated users as its primary experience.
+
+Authentication enables:
+
+- Personal understanding
+- Progress history
+- Cloud synchronisation
+- Multi-device continuity
+- Personalised recommendations
+
+A limited guest experience may be provided for exploration, but Forge's full value is realised through an authenticated user profile.
 
 ---
 
 # Architectural Independence
 
-The Decision Engine should never communicate directly with:
+The core business logic must remain independent of implementation technologies.
+
+The Decision Engine communicates only with abstract interfaces.
+
+It should never depend directly upon:
 
 - Databases
+- Cloud providers
 - AI providers
-- External APIs
+- Authentication services
+- Third-party APIs
 
-Instead, it communicates through service interfaces.
+This enables technologies to evolve without affecting the product's reasoning capabilities.
 
-```
-Decision Engine
+---
 
-↓
+# Deterministic Reasoning
 
-Knowledge Services
+Forge's recommendations should be deterministic.
 
-↓
+Given the same:
 
-Repositories
+- Evidence
+- Personal Understanding
+- Current Context
 
-↓
+Forge should always produce the same decision.
 
-Storage / Cloud / AI
-```
+This principle supports:
 
-This enables future technology changes without affecting business logic.
+- Explainability
+- Testing
+- Predictability
+- User trust
+
+Creativity belongs within conversation and education.
+
+Reasoning remains deterministic.
 
 ---
 
 # Scalability
 
+Forge is designed to scale gradually.
+
 The architecture should support:
 
 - Individual users
 - Families
-- Professional coaches
-- Healthcare providers
+- Coaches
+- Healthcare professionals
 - Community features
 
-without requiring architectural redesign.
+Scaling should occur through modular evolution rather than premature architectural complexity.
+
+Operational simplicity should always be preferred unless evidence demonstrates a need for additional sophistication.
 
 ---
 
@@ -294,10 +319,13 @@ Forge should protect user information through:
 
 - Secure authentication
 - Encrypted communication
-- Secure cloud storage
+- Secure data storage
 - Least-privilege access
+- Secure backups
 
-Users should retain ownership of their data.
+Users remain the owners of their personal information.
+
+Forge should request only the information necessary to provide meaningful recommendations.
 
 ---
 
@@ -305,19 +333,25 @@ Users should retain ownership of their data.
 
 The architecture should support future capabilities including:
 
-- Local AI models
-- Smart home integrations
-- Grocery delivery
-- Wearable health devices
+- Local AI reasoning
+- Additional knowledge providers
+- Wearable integration
+- Healthcare integrations
+- Household planning
+- Grocery services
+- Coach dashboards
 - Desktop applications
-- Offline AI reasoning
 
-Future technologies should extend the architecture rather than redefine it.
+Future enhancements should extend Forge's existing architecture rather than replace it.
 
 ---
 
 # Guiding Statement
 
-> Technology exists to support Forge's understanding of the user, not to define it.
+> Technology exists to support understanding.
 
-Forge should remain adaptable, independent and resilient as technology evolves.
+> Understanding enables better decisions.
+
+> Better decisions improve lives.
+
+Forge's architecture should remain simple, adaptable and trustworthy for decades to come.
