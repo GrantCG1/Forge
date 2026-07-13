@@ -28,6 +28,8 @@ Forge exists to help people make better decisions more consistently, while gradu
 
 Forge is built upon a Christian worldview. Its values, behaviours and philosophy are intentionally informed by biblical wisdom while serving users through practical, evidence-based health guidance.
 
+Forge empowers users to build a personal library of trusted health knowledge. Users may add, organise and adapt their own recipes, workouts and rehabilitation programmes alongside Forge's recommendations.
+
 ---
 
 # Mission
