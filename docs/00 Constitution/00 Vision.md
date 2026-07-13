@@ -134,6 +134,8 @@ Forge is:
 * A platform for sustainable healthy living.
 * A product that evolves through learning while remaining true to its purpose.
 
+Forge is founded on Christian principles. Its philosophy of encouragement, stewardship, wisdom, humility, perseverance and service is intentionally shaped by biblical teaching. These principles guide how Forge educates, supports and interacts with its users.
+
 ---
 
 # What Forge Is Not
