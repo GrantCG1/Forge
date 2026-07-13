@@ -384,6 +384,12 @@ Updated Personal Understanding
 Future Decisions
 
 ```
+
+Learning is intentionally slower than interaction.
+
+Forge values stable understanding over reactive adaptation.
+
+---
 # Import Module
 
 OCR
@@ -404,11 +410,19 @@ Categoriser
 
 Library
 
-```
+---
 
-Learning is intentionally slower than interaction.
+# Import Module
 
-Forge values stable understanding over reactive adaptation.
+Forge Content
+
+↓
+
+User Content
+
+↓
+
+Imported Content
 
 ---
 
