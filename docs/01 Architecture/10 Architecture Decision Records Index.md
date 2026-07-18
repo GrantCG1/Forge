@@ -4,7 +4,7 @@
 **Status:** Active  
 **Owner:** Grant Groenewald  
 **Contributors:** Grant Groenewald, ChatGPT  
-**Last Updated:** 13 July 2026
+**Last Updated:** 18 July 2026
 
 ---
 
@@ -80,6 +80,8 @@ This document should be read after:
 | ADR-010 | Progressive Disclosure User Experience | Accepted |
 | ADR-011 | Technology Supports Forge, Not Defines It | Accepted |
 | ADR-012 | Behaviour Over Implementation | Accepted |
+| [ADR-013](ADR/ADR-013%20Frontend%20Technology%20Selection.md) | Frontend Technology Selection | Accepted |
+| [ADR-014](ADR/ADR-014%20Backend%20Platform%20Selection.md) | Backend Platform Selection | Accepted |
 
 ---
 
@@ -89,8 +91,6 @@ The following decisions are expected to be documented as Forge evolves.
 
 | ADR | Title | Status |
 |------|-------|--------|
-| ADR-013 | Frontend Technology Selection | Proposed |
-| ADR-014 | Backend Platform Selection | Proposed |
 | ADR-015 | Database Strategy | Proposed |
 | ADR-016 | Authentication Strategy | Proposed |
 | ADR-017 | AI Provider Strategy | Proposed |

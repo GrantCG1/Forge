@@ -11,5 +11,9 @@ build/
 # VS Code
 .vscode/
 
+# IntelliJ / Android Studio
+.idea/
+*.iml
+
 # macOS
 .DS_Store
