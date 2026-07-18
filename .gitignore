@@ -1,0 +1,15 @@
+# .NET
+**/bin/
+**/obj/
+
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
