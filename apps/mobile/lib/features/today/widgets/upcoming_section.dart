@@ -1,38 +1,34 @@
 import 'package:flutter/material.dart';
 
+import '../../../domain/models/recommendation.dart';
 import 'section_heading.dart';
 import 'upcoming_item.dart';
 
-/// The "Upcoming" section, listing a few placeholder items.
+/// The "Upcoming" section, listing upcoming [Recommendation]s.
+///
+/// Receives an already-prepared list of recommendations — it does not
+/// construct, fetch or transform them.
 class UpcomingSection extends StatelessWidget {
-  const UpcomingSection({super.key});
+  const UpcomingSection({super.key, required this.recommendations});
+
+  final List<Recommendation> recommendations;
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SectionHeading(title: 'Upcoming'),
-        SizedBox(height: 12),
+        const SectionHeading(title: 'Upcoming'),
+        const SizedBox(height: 12),
         Card(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
             child: Column(
               children: [
-                UpcomingItem(
-                  icon: Icons.shopping_cart_outlined,
-                  label: 'Grocery shopping',
-                ),
-                Divider(height: 1),
-                UpcomingItem(
-                  icon: Icons.sports_tennis_outlined,
-                  label: 'Tennis',
-                ),
-                Divider(height: 1),
-                UpcomingItem(
-                  icon: Icons.set_meal_outlined,
-                  label: 'Meal prep',
-                ),
+                for (var i = 0; i < recommendations.length; i++) ...[
+                  if (i > 0) const Divider(height: 1),
+                  UpcomingItem(recommendation: recommendations[i]),
+                ],
               ],
             ),
           ),

@@ -46,17 +46,17 @@ void main() {
     await tester.pumpWidget(const ForgeApp());
 
     expect(find.text("Today's Plan"), findsOneWidget);
-    expect(find.text('Breakfast'), findsOneWidget);
-    expect(find.text('Lunch'), findsOneWidget);
-    expect(find.text('Dinner'), findsOneWidget);
-    expect(find.text('Activity'), findsOneWidget);
+    expect(find.text('Greek Yoghurt with Berries'), findsOneWidget);
+    expect(find.text('Chicken Wrap with Salad'), findsOneWidget);
+    expect(find.text('Chicken & Vegetable Pasta'), findsOneWidget);
+    expect(find.text('Gym Session'), findsOneWidget);
 
     expect(find.text('This Week'), findsOneWidget);
 
     expect(find.text('Upcoming'), findsOneWidget);
-    expect(find.text('Grocery shopping'), findsOneWidget);
-    expect(find.text('Tennis'), findsOneWidget);
+    expect(find.text('Buy groceries'), findsOneWidget);
     expect(find.text('Meal prep'), findsOneWidget);
+    expect(find.text('Padel on Saturday'), findsOneWidget);
 
     expect(find.text('Ask Forge'), findsOneWidget);
   });

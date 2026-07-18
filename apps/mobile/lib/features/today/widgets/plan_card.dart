@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 
-/// A single card within Today's Plan.
+import '../../../domain/models/meal.dart';
+
+/// A single card within Today's Plan, presenting a [Meal].
 ///
 /// Extracted because the same visual structure (icon, title, description,
-/// and an affordance suggesting it opens later) is reused four times —
-/// for Breakfast, Lunch, Dinner and Activity. The trailing chevron is
-/// visual only; no navigation is wired up yet.
+/// and an affordance suggesting it opens later) is reused for Breakfast,
+/// Lunch and Dinner. The trailing chevron is visual only; no navigation
+/// is wired up yet. This widget only renders the [meal] it is given — it
+/// does not construct, fetch or transform it.
 class PlanCard extends StatelessWidget {
-  const PlanCard({
-    super.key,
-    required this.icon,
-    required this.title,
-    required this.description,
-  });
+  const PlanCard({super.key, required this.meal, required this.icon});
 
+  final Meal meal;
   final IconData icon;
-  final String title;
-  final String description;
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +30,8 @@ class PlanCard extends StatelessWidget {
           foregroundColor: theme.colorScheme.onSecondaryContainer,
           child: Icon(icon),
         ),
-        title: Text(title, style: theme.textTheme.titleMedium),
-        subtitle: Text(description),
+        title: Text(meal.name, style: theme.textTheme.titleMedium),
+        subtitle: Text(meal.description),
         trailing: Icon(Icons.chevron_right, color: theme.colorScheme.outline),
       ),
     );
